@@ -1,0 +1,4 @@
+#!/bin/bash
+now=$(date +"%y-%m-%d")
+echo "$now-file.txt"
+echo "one two three four five" | xargs -n1 > "$now-file.txt"

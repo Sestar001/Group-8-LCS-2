@@ -1,0 +1,11 @@
+#! /bin/bash
+one=$RANDOM
+two=$RANDOM
+three=$(echo "$one" | awk '{print sqrt($1)}')
+echo "The first random number is $one"
+echo "Square Root of $one is $three"
+four=$(echo "$two" | awk '{print sqrt($1)}')
+echo "The second random number is $two"
+echo "Square Root of $two is $four"
+five=$(echo "scale=5; "$three"+"$four| bc -l)
+echo "The sum of their square roots is $five"

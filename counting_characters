@@ -1,0 +1,13 @@
+#! /bin/bash
+
+echo "Enter a String"
+# Taking input from user
+read text
+
+# Counting words
+word=$(echo -n "$text" | wc -w)
+# Counting Number of white spaces
+space=$(expr length "$text" - length `echo "$text" | sed "s/ //g"`)
+# Output
+echo "Number of Words = $word"
+echo "Number of White Spaces = $space"
